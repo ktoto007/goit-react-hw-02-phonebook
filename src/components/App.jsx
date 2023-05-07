@@ -17,7 +17,7 @@ export class App extends Component {
     this.setState(prevState => {
       if (
         prevState.contacts.some(
-          ({ name }) => name.toLowerCase() == values.name.toLowerCase()
+          ({ name }) => name.toLowerCase() === values.name.toLowerCase()
         )
       ) {
         alert(`${values.name} is already in contacts`);
@@ -45,9 +45,11 @@ export class App extends Component {
   deleteContact = e => {
     this.setState(prevState => {
       return {
-        contacts: prevState.contacts.filter(
-          contact => contact.id != e.target.id
-        ),
+        contacts: prevState.contacts.filter(contact => {
+          if (contact.id !== e.target.id) {
+            return contact;
+          }
+        }),
       };
     });
   };
