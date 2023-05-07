@@ -35,21 +35,17 @@ export class App extends Component {
   };
 
   onFilterContact = (contacts, param) => {
-    return contacts.filter(contact => {
-      if (contact.name.toLowerCase().includes(param.toLowerCase())) {
-        return contact;
-      }
-    });
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(param.toLowerCase())
+    );
   };
 
   deleteContact = e => {
     this.setState(prevState => {
       return {
-        contacts: prevState.contacts.filter(contact => {
-          if (contact.id !== e.target.id) {
-            return contact;
-          }
-        }),
+        contacts: prevState.contacts.filter(
+          contact => contact.id !== e.target.id
+        ),
       };
     });
   };
