@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Formik, Form, Field } from 'formik';
+import { Formik } from 'formik';
 import { object, string } from 'yup';
 import { nanoid } from 'nanoid';
 import { FormLabel, FormInput, StyledForm } from './FormContaks.styled';
