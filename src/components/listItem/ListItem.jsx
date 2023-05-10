@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
-
+import { ElementContent, StyledListItem } from './ListItem.styled';
 export const ListItem = ({ id, name, number, deleteContact }) => {
   return (
-    <li>
-      {name}: {number}
-      <button type="button" id={id} onClick={deleteContact}>
+    <StyledListItem>
+      <ElementContent>
+        {name}: {number}
+      </ElementContent>
+      <button type="button" className="button" id={id} onClick={deleteContact}>
         Delete
       </button>
-    </li>
+    </StyledListItem>
   );
 };
 
