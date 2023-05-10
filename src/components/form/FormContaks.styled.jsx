@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Form, Field } from 'formik';
-
 export const FormLabel = styled.label`
   display: block;
   margin-bottom: 10px;

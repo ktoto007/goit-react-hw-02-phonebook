@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 export const ElementContent = styled.span`
   margin-right: 10px;
 `;
